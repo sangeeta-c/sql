@@ -1,0 +1,60 @@
+ Exercise 1 — Tasks
+=====================
+ CREATE TABLE Pictures(
+	Id int,
+	title varchar(255),
+	director varchar(255),
+	year int,
+	length_minutes int
+);
+---------------------
+
+INSERT INTO pictures (id, title, director, year, length_minutes)
+VALUES ('1', 'Toy Story', 'John Lasseter', '1995', '81'); 
+
+INSERT INTO pictures (id, title, director, year, length_minutes)
+VALUES ('2', 'A Bugs Life', 'John Lasseter', '1998', '95'); 
+
+INSERT INTO pictures (id, title, director, year, length_minutes)
+VALUES ('3', 'Toy Story 2', 'John Lasseter', '1999', '93'); 
+
+INSERT INTO pictures (id, title, director, year, length_minutes)
+VALUES ('4', 'Toy Story', 'Pete Docter', '2001', '92'); 
+
+INSERT INTO pictures (id, title, director, year, length_minutes)
+VALUES ('5', 'Finding Nemo', 'Andrew Stanton', '2003', '107'); 
+
+INSERT INTO pictures (id, title, director, year, length_minutes)
+VALUES ('6', 'The Incredibles', 'Brad Bird', '2004', '116'); 
+
+INSERT INTO pictures (id, title, director, year, length_minutes)
+VALUES ('7', 'Cars', 'John Lasseter', '2006', '117'); 
+
+INSERT INTO pictures (id, title, director, year, length_minutes)
+VALUES ('8', 'Ratatouille', 'Brad Bird', '2007', '115'); 
+
+INSERT INTO pictures (id, title, director, year, length_minutes)
+VALUES ('9', 'WALL-E', 'Andrew Stanton', '2008', '104'); 
+
+INSERT INTO pictures (id, title, director, year, length_minutes)
+VALUES ('10', 'Toy Story', 'Pete Docter', '2009', '101'); 
+
+--------------
+SELECT * FROM pictures;
+
+Questions:
+----------
+   1. Find the title of each film
+   2. Find the director of each film
+   3. Find the title and director of each film
+   4. Find the title and year of each film
+   5. Find all the information about each film
+
+	
+Solution:
+
+	1.select title from pictures;
+	2.select director from pictures;
+	3.select title, director from pictures;
+	4.select title, year from pictures;
+	5.select * from pictures;
