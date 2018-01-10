@@ -1,0 +1,31 @@
+Exercise 4 — ORDER BY,LIMIT and OFFSET
+==========================================
+1.List all directors of Pixar movies (alphabetically), without duplicates
+2.List the last four Pixar movies released (ordered from most recent to least)
+3.List the first five Pixar movies sorted alphabetically
+4.List the next five Pixar movies sorted alphabetically
+
+SOLUTIONS:
+===========
+select * from pictures;
+
+1.SELECT DISTINCT director FROM pictures
+ORDER BY Title ASC;
+
+2.select Title,year FROM pictures
+ORDER BY year DESC
+LIMIT 4;
+
+3.select Title FROM pictures
+ORDER BY Title ASC
+LIMIT 5;
+
+4.select title, year FROM pictures
+ORDER BY year ASC
+LIMIT 5;
+
+OR
+
+select title, year FROM pictures
+WHERE YEAR <= 2003;
+
