@@ -1,0 +1,29 @@
+SQL Review: Simple SELECT Queries 
+=================================
+1.List all the Canadian cities and their populations
+2.Order all the cities in the United States by their latitude from north to south 
+3.List the two largest cities in Mexico (by population) 
+4.List the third and fourth largest cities (by population) in the United States and their population 
+
+SOLUTIONS:
+===========
+SELECT * FROM north_american_cities;
+
+1.SELECT  city , population,country from north_american_cities
+WHERE country = 'canada';
+
+2.SELECT city, latitude  FROM north_american_cities
+WHERE  country = 'United States'
+ORDER BY latitude DESC;
+
+3.SELECT city,Population FROM north_american_cities
+WHERE  country LIKE "Mexico"
+ORDER BY Population DESC
+LIMIT 2;
+
+4.SELECT city,Population FROM north_american_cities
+WHERE  country LIKE "United States"
+ORDER BY Population DESC
+LIMIT 2 OFFSET 2;
+
+
