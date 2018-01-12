@@ -1,0 +1,29 @@
+Exercise 6 — INNER JOIN 
+==================
+1.Find the domestic and international sales for each movie 
+2.Show the sales numbers for each movie that did better internationally rather than domestically 
+3.List all the movies by their ratings in descending order 
+
+SOLUTIONS:
+===========
+select * from pictures;
+select * from Boxoffice;
+
+1.select Id, Title, domestic_sales, international_sales
+from pictures
+INNER JOIN Boxoffice
+	ON pictures.Id = Boxoffice.movie_id
+Order BY Id ASC;
+
+2.select Id, Title, international_sales , domestic_sales
+from pictures
+INNER JOIN Boxoffice
+	ON pictures.id = Boxoffice.movie_id
+where international_sales > domestic_sales
+ORDER BY ID ASC;
+
+3.select Rating,Title 
+from pictures
+INNER JOIN Boxoffice
+	ON pictures.id = Boxoffice.movie_id
+ORDER BY Rating DESC;
